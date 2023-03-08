@@ -11,6 +11,8 @@ import {
   AccordionSummary,
   AccordionDetails,
   Typography,
+  ImageList,
+  ImageListItem,
 } from "@mui/material";
 import "./App.css";
 import Review from "./Review";
@@ -20,7 +22,11 @@ function App() {
   return (
     <Container maxwidth="md">
       <ChooseLanguage />
-      <h1>DC Jobs Referral Service</h1>
+      <Typography>
+        <h1 style={{ letterSpacing: "3px", textTransform: "uppercase" }}>
+          DC Jobs Referral Service
+        </h1>
+      </Typography>
 
       <h1>{t("title")}</h1>
       <h2>{t("subheader")}</h2>
@@ -58,6 +64,26 @@ function App() {
           <Typography>{t("why3")}</Typography>
         </AccordionDetails>
       </Accordion>
+      <ImageList>
+        <ImageListItem>
+          <img src="1.jpg" alt="cleaning" />
+        </ImageListItem>
+        <ImageListItem>
+          <img src="2.jpg" alt="hands" />
+        </ImageListItem>
+        <ImageListItem>
+          <img src="3.jpg" alt="construction" />
+        </ImageListItem>
+        <ImageListItem>
+          <img src="4.jpg" alt="construction" />
+        </ImageListItem>
+        <ImageListItem>
+          <img src="5.jpg" alt="construction" />
+        </ImageListItem>
+        <ImageListItem>
+          <img src="6.jpg" alt="construction" />
+        </ImageListItem>
+      </ImageList>
       <Container>
         <Typography>
           <h2>{t("reviews")}</h2>
