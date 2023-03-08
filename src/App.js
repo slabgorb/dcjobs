@@ -1,5 +1,9 @@
 import ChooseLanguage from "./ChooseLanguage";
 import { useTranslation } from "react-i18next";
+import { MapContainer } from "react-leaflet/MapContainer";
+import { TileLayer } from "react-leaflet/TileLayer";
+import { Marker } from "react-leaflet/Marker";
+import { Popup } from "react-leaflet/Popup";
 import "@fontsource/raleway";
 import {
   Card,
@@ -19,6 +23,9 @@ import Review from "./Review";
 
 function App() {
   const { t } = useTranslation();
+  const maplink =
+    "https://www.google.com/maps/dir/61+Pierce+St+NE,+Washington,+DC+20002/@38.9044547,-77.0097505,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7b81fa06c4b53:0x4dab6afa751fb0a7!8m2!3d38.9044505!4d-77.0075618!16s%2Fg%2F11rkdhfshr";
+  const position = [38.904, -77.007];
   return (
     <Container maxwidth="md">
       <ChooseLanguage />
@@ -27,10 +34,8 @@ function App() {
           DC Jobs Referral Service
         </h1>
       </Typography>
-
       <h1>{t("title")}</h1>
       <h2>{t("subheader")}</h2>
-
       <Button variant="text">
         <a href="tel:+12403804680">{t("connect")}</a>
       </Button>
@@ -41,6 +46,12 @@ function App() {
           <br />
           <br />
           {t("types")}
+          <address>
+            <a href={maplink} target="_blank" rel="noreferrer">
+              61 Pierce Street Northeast Washington, District of Columbia 20002
+            </a>
+          </address>
+          <a href="tel:+12403804680">(240) 380-4680</a>
         </CardContent>
       </Card>
       <Accordion>
@@ -85,6 +96,15 @@ function App() {
         </ImageListItem>
       </ImageList>
       <Container>
+        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={position}>
+            <Popup>DC Jobs Referral Service Location</Popup>
+          </Marker>
+        </MapContainer>
         <Typography>
           <h2>{t("reviews")}</h2>
         </Typography>
