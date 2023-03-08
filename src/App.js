@@ -17,7 +17,8 @@ import {
   Typography,
   ImageList,
   ImageListItem,
-  Link,
+  CardMedia,
+  Box,
 } from "@mui/material";
 import "./App.css";
 import Review from "./Review";
@@ -27,14 +28,38 @@ function App() {
   const maplink =
     "https://www.google.com/maps/dir//61+Pierce+St+NE,+Washington,+DC+20002/@38.9045632,-77.0776015,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x89b7b81fa06c4b53:0x4dab6afa751fb0a7!2m2!1d-77.0075618!2d38.9044505";
   const position = [38.904, -77.007];
+  const imageSet = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"];
+  const image = imageSet[Math.floor(Math.random() * imageSet.length)];
   return (
     <Container maxwidth="md">
       <ChooseLanguage />
-      <Typography>
-        <h1 style={{ letterSpacing: "3px", textTransform: "uppercase" }}>
-          DC Jobs Referral Service
-        </h1>
-      </Typography>
+      <Card>
+        <Box sx={{ position: "relative" }}>
+          <CardMedia
+            component="img"
+            image={image}
+            sx={{
+              height: 500,
+              display: "center",
+            }}
+          />
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              width: "100%",
+              bgcolor: "rgba(0, 0, 0, 0.54)",
+              color: "white",
+              padding: "10px",
+            }}
+          >
+            <Typography variant="h2" sx={{ textTransform: "uppercase" }}>
+              DC Jobs Referral Service
+            </Typography>
+          </Box>
+        </Box>
+      </Card>
       <h1>{t("title")}</h1>
       <h2>{t("subheader")}</h2>
       <Button variant="text">
@@ -77,26 +102,6 @@ function App() {
           <Typography>{t("why3")}</Typography>
         </AccordionDetails>
       </Accordion>
-      <ImageList>
-        <ImageListItem>
-          <img src="1.jpg" alt="cleaning" />
-        </ImageListItem>
-        <ImageListItem>
-          <img src="2.jpg" alt="hands" />
-        </ImageListItem>
-        <ImageListItem>
-          <img src="3.jpg" alt="construction" />
-        </ImageListItem>
-        <ImageListItem>
-          <img src="4.jpg" alt="construction" />
-        </ImageListItem>
-        <ImageListItem>
-          <img src="5.jpg" alt="construction" />
-        </ImageListItem>
-        <ImageListItem>
-          <img src="6.jpg" alt="construction" />
-        </ImageListItem>
-      </ImageList>
       <Container>
         <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
           <TileLayer

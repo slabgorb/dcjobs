@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Button, AppBar, Container } from "@mui/material";
+import { Button, Toolbar, Container } from "@mui/material";
 import i18n from "i18next";
 import LanguageIcon from "@mui/icons-material/Language";
 
@@ -17,7 +17,7 @@ function LanguageButton(props) {
       onClick={() => {
         changeLanguage(props.lang);
       }}
-      variant="contained"
+      variant="outlined"
     >
       {props.lang}
     </Button>
@@ -27,7 +27,7 @@ function LanguageButton(props) {
 function ChooseLanguage() {
   const { t, i18n } = useTranslation();
   return (
-    <AppBar position="static" color="background">
+    <Toolbar position="static" color="background">
       <Container>
         {i18n.language === "es" ? (
           <LanguageButton lang="en" />
@@ -35,7 +35,7 @@ function ChooseLanguage() {
           <LanguageButton lang="es" />
         )}
       </Container>
-    </AppBar>
+    </Toolbar>
   );
 }
 
