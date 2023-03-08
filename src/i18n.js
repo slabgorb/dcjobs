@@ -5,6 +5,7 @@ const resources = {
   en: {
     translation: {
       reviews: "Reviews",
+      get_directions: "Get Directions",
       about_title: "About Us",
       title: "Build your exposure to employers, grow your visibility.",
       subheader: "Dedicated, personalised service",
@@ -39,6 +40,7 @@ const resources = {
   es: {
     translation: {
       reviews: "Reseñas",
+      get_directions: "Obtener Direcciones",
       about_title: "Sobre Nosotros",
       title: "Aumente su exposición a los empleadores, aumente su visibilidad",
       subheader: "Servicio dedicado y personalizado",

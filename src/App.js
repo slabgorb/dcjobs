@@ -17,6 +17,7 @@ import {
   Typography,
   ImageList,
   ImageListItem,
+  Link,
 } from "@mui/material";
 import "./App.css";
 import Review from "./Review";
@@ -24,7 +25,7 @@ import Review from "./Review";
 function App() {
   const { t } = useTranslation();
   const maplink =
-    "https://www.google.com/maps/dir/61+Pierce+St+NE,+Washington,+DC+20002/@38.9044547,-77.0097505,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7b81fa06c4b53:0x4dab6afa751fb0a7!8m2!3d38.9044505!4d-77.0075618!16s%2Fg%2F11rkdhfshr";
+    "https://www.google.com/maps/dir//61+Pierce+St+NE,+Washington,+DC+20002/@38.9045632,-77.0776015,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x89b7b81fa06c4b53:0x4dab6afa751fb0a7!2m2!1d-77.0075618!2d38.9044505";
   const position = [38.904, -77.007];
   return (
     <Container maxwidth="md">
@@ -47,9 +48,10 @@ function App() {
           <br />
           {t("types")}
           <address>
-            <a href={maplink} target="_blank" rel="noreferrer">
-              61 Pierce Street Northeast Washington, District of Columbia 20002
-            </a>
+            61 Pierce Street Northeast Washington, District of Columbia 20002
+            <Button href={maplink} target="_blank" rel="noreferrer">
+              {t("get_directions")}
+            </Button>
           </address>
           <a href="tel:+12403804680">(240) 380-4680</a>
         </CardContent>
