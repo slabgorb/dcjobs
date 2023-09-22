@@ -4,6 +4,7 @@ import {
     Typography,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import Map from "./Map";
 
 function Section(props) {
     return (
@@ -14,17 +15,17 @@ function Section(props) {
             <Typography>{props.details}</Typography>
         </Container>
     );
-}
+};
 
-function About() {
-
-    const { t } = useTranslation();
+function About(props) {
     const maplink =
         "https://www.google.com/maps/dir//61+Pierce+St+NE,+Washington,+DC+20002/@38.9045632,-77.0776015,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x89b7b81fa06c4b53:0x4dab6afa751fb0a7!2m2!1d-77.0075618!2d38.9044505";
     const position = [38.904, -77.007];
+    const { t } = useTranslation();
+
     return (
         <Container maxwidth="md" >
-
+            <Map maplink={maplink} position={position} />
             <h1>{t("title")}</h1>
             <h2>{t("subheader")}</h2>
             <Button variant="text">

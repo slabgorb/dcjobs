@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 
-function Start() {
+function Start(props) {
     return (
         <Container>
             <h1>Start</h1>

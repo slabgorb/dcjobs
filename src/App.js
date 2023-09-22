@@ -22,48 +22,35 @@ const darkTheme = createTheme({
     },
 });
 
-function App() {
+function App(props) {
     const { t } = useTranslation();
-    let currentPage = "About";
+    var currentPage = "About";
     return (
         <ThemeProvider theme={darkTheme}>
-            <ChooseLanguage />
-
-            <Card>
-                <Box sx={{ position: "relative" }}>
-                    <Typography variant="h2" sx={{ textTransform: "uppercase" }}>
-                        Elite Talent Connect
-                    </Typography>
-                </Box>
-            </Card>
-            <ButtonGroup variant="contained" aria-label="outlined primary button group">
-                <Button onClick={
-                    () => currentPage = "Home"
-                }>{t('home')}</Button>
-                <Button onClick={
-                    () => currentPage = "About"
-                }>{t('about')}</Button>
-                <Button onClick={
-                    () => currentPage = "Start"
-                }>{t('start')}</Button>
-            </ButtonGroup>
-            {(currentPage == "Home") ?
-                <Container>
-                    <Home />
-                </Container> : null}
-            {(currentPage == "About") ?
-                <Container>
-                    <About />
-                </Container> : null}
-            {(currentPage == "Start") ?
-                <Container>
-                    <Start />
-                </Container> : null}
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <Container>
+                <ChooseLanguage />
+                <Card>
+                    <Box sx={{ position: "relative" }}>
+                        <Typography variant="h2" sx={{ textTransform: "uppercase" }}>
+                            Elite Talent Connect
+                        </Typography>
+                    </Box>
+                </Card>
+                <ButtonGroup variant="contained" aria-label="outlined primary button group">
+                    <Button onClick={
+                        () => currentPage = "Home" && console.log(currentPage)
+                    }>{t('home')}</Button>
+                    <Button onClick={
+                        () => currentPage = "About" && console.log(currentPage)
+                    }>{t('about')}</Button>
+                    <Button onClick={
+                        () => currentPage = "Start" && console.log(currentPage)
+                    }>{t('start')}</Button>
+                </ButtonGroup>
+                <Home style={currentPage === "Home" ? 'display:none' : 'display:block'} />
+                <About style={currentPage === "About" ? 'display:none' : 'display:block'} />
+                <Start style={currentPage === "Start" ? 'display:none' : 'display:block'} />
+            </Container>
         </ThemeProvider>
     );
 }

@@ -78,6 +78,7 @@ const resources = {
             testiomonial1:
                 "El equipo de Elite Talent Connect es un salvavidas. Me sentí abrumado con toda la competencia en el mercado laboral actual. Gracias con todo mi corazón.",
             connect: "Conéctate con nosotros",
+            title: "Construye tu exposición a los empleadores, crece tu visibilidad.",
             types:
                 "Ayudamos a nuestros clientes a alcanzar puestos que normalmente no cuentan con el apoyo de una agencia.  Tenemos puestos como almacén, mantenimiento, restaurante, hotel, servicio al cliente, conductores, construcción y puestos de oficina de nivel de entrada. Muchas personas que califican para estos puestos no tienen informacion interna o representacion para obtener la ventaja competitivia que necesitan en el mercado laboral actual.",
             why: "¿Por qué elegir Elite Talent Connect sobre agencias gratuitas?",
