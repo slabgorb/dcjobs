@@ -1,10 +1,16 @@
-import { Container } from "@mui/material";
+import { Container, Button } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
-function Start() {
+function Start(props) {
+    const { t } = useTranslation();
     return (
         <Container>
-            <h1>Start</h1>
-            <p>FORM WILL GO HERE</p>
+            <Button variant="text">
+                <a href="tel:+12403804680">{t("connect")}</a>
+            </Button>
+            < Button variant="text">
+                <a href="mailto:">{t("email")}</a>
+            </Button>
         </Container>
     );
 }

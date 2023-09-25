@@ -5,14 +5,13 @@ import "./App.css";
 import Home from "./Home";
 import About from "./About";
 import Start from "./Start";
+import Nav from "./Nav";
 import ChooseLanguage from "./ChooseLanguage";
 
 import {
     Card,
     Container,
-    Button,
     Typography,
-    ButtonGroup,
     Box,
 } from "@mui/material";
 
@@ -22,48 +21,25 @@ const darkTheme = createTheme({
     },
 });
 
-function App() {
+function App(props) {
     const { t } = useTranslation();
-    let currentPage = "About";
+    var currentPage = "About";
     return (
         <ThemeProvider theme={darkTheme}>
-            <ChooseLanguage />
+            <Container>
+                <ChooseLanguage />
+                <Card>
+                    <Box sx={{ position: "relative" }}>
+                        <Typography variant="h2" sx={{ textTransform: "uppercase" }}>
+                            Elite Talent Connect
+                        </Typography>
+                    </Box>
+                </Card>
+                <Start style={currentPage === "Start" ? 'display:none' : 'display:block'} />
 
-            <Card>
-                <Box sx={{ position: "relative" }}>
-                    <Typography variant="h2" sx={{ textTransform: "uppercase" }}>
-                        Elite Talent Connect
-                    </Typography>
-                </Box>
-            </Card>
-            <ButtonGroup variant="contained" aria-label="outlined primary button group">
-                <Button onClick={
-                    () => currentPage = "Home"
-                }>{t('home')}</Button>
-                <Button onClick={
-                    () => currentPage = "About"
-                }>{t('about')}</Button>
-                <Button onClick={
-                    () => currentPage = "Start"
-                }>{t('start')}</Button>
-            </ButtonGroup>
-            {(currentPage == "Home") ?
-                <Container>
-                    <Home />
-                </Container> : null}
-            {(currentPage == "About") ?
-                <Container>
-                    <About />
-                </Container> : null}
-            {(currentPage == "Start") ?
-                <Container>
-                    <Start />
-                </Container> : null}
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+                <Home style={currentPage === "Home" ? 'display:none' : 'display:block'} />
+                <About style={currentPage === "About" ? 'display:none' : 'display:block'} />
+            </Container>
         </ThemeProvider>
     );
 }
