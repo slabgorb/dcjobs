@@ -3,7 +3,7 @@ import { TileLayer } from "react-leaflet/TileLayer";
 import { Marker } from "react-leaflet/Marker";
 import { Popup } from "react-leaflet/Popup";
 
-import { Card, CardContent, CardHeader, Container, Button } from "@mui/material";
+import { Card, CardContent,  Container, Button } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
 function Map(props) {

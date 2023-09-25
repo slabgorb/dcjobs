@@ -28,9 +28,7 @@ function About(props) {
             <Map maplink={maplink} position={position} />
             <h1>{t("title")}</h1>
             <h2>{t("subheader")}</h2>
-            <Button variant="text">
-                <a href="tel:+12403804680">{t("connect")}</a>
-            </Button>
+
             <Section title={t("about_title1")} details={t("about_body1")} />
             <Section title={t("about_title2")} details={t("about_body2")} />
             <Section title={t("about_title3")} details={t("about_body3")} />

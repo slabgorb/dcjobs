@@ -5,14 +5,13 @@ import "./App.css";
 import Home from "./Home";
 import About from "./About";
 import Start from "./Start";
+import Nav from "./Nav";
 import ChooseLanguage from "./ChooseLanguage";
 
 import {
     Card,
     Container,
-    Button,
     Typography,
-    ButtonGroup,
     Box,
 } from "@mui/material";
 
@@ -36,17 +35,7 @@ function App(props) {
                         </Typography>
                     </Box>
                 </Card>
-                <ButtonGroup variant="contained" aria-label="outlined primary button group">
-                    <Button onClick={
-                        () => currentPage = "Home" && console.log(currentPage)
-                    }>{t('home')}</Button>
-                    <Button onClick={
-                        () => currentPage = "About" && console.log(currentPage)
-                    }>{t('about')}</Button>
-                    <Button onClick={
-                        () => currentPage = "Start" && console.log(currentPage)
-                    }>{t('start')}</Button>
-                </ButtonGroup>
+
                 <Home style={currentPage === "Home" ? 'display:none' : 'display:block'} />
                 <About style={currentPage === "About" ? 'display:none' : 'display:block'} />
                 <Start style={currentPage === "Start" ? 'display:none' : 'display:block'} />
