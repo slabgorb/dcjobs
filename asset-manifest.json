@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dcjobs/static/css/main.c6180995.css",
+    "main.css": "/dcjobs/static/css/main.f70aeccc.css",
     "main.js": "/dcjobs/static/js/main.c3fa90e7.js",
     "static/media/raleway-all-400-normal.woff": "/dcjobs/static/media/raleway-all-400-normal.98e7ff86f2b9a46e19cc.woff",
     "static/media/raleway-latin-400-normal.woff2": "/dcjobs/static/media/raleway-latin-400-normal.0bdecdd83e78d540c297.woff2",
@@ -9,11 +9,11 @@
     "static/media/raleway-cyrillic-400-normal.woff2": "/dcjobs/static/media/raleway-cyrillic-400-normal.f7d0cc4bf9cf8da4f023.woff2",
     "static/media/raleway-vietnamese-400-normal.woff2": "/dcjobs/static/media/raleway-vietnamese-400-normal.bb6f51e1b67ec8802d57.woff2",
     "index.html": "/dcjobs/index.html",
-    "main.c6180995.css.map": "/dcjobs/static/css/main.c6180995.css.map",
+    "main.f70aeccc.css.map": "/dcjobs/static/css/main.f70aeccc.css.map",
     "main.c3fa90e7.js.map": "/dcjobs/static/js/main.c3fa90e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6180995.css",
+    "static/css/main.f70aeccc.css",
     "static/js/main.c3fa90e7.js"
   ]
 }
