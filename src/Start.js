@@ -5,11 +5,12 @@ function Start(props) {
     const { t } = useTranslation();
     return (
         <Container>
-            <h1>Contact Us</h1>
             <Button variant="text">
                 <a href="tel:+12403804680">{t("connect")}</a>
             </Button>
-            <a href="mailto:">Email us</a>
+            < Button variant="text">
+                <a href="mailto:">{t("email")}</a>
+            </Button>
         </Container>
     );
 }

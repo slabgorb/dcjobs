@@ -28,7 +28,6 @@ function About(props) {
             <Map maplink={maplink} position={position} />
             <h1>{t("title")}</h1>
             <h2>{t("subheader")}</h2>
-
             <Section title={t("about_title1")} details={t("about_body1")} />
             <Section title={t("about_title2")} details={t("about_body2")} />
             <Section title={t("about_title3")} details={t("about_body3")} />
@@ -39,7 +38,6 @@ function About(props) {
             <Section title={t("about_title8")} details={t("about_body8")} />
             <Section title={t("about_title9")} details={t("about_body9")} />
             <Section title={t("about_title10")} details={t("about_body10")} />
-
         </Container>
     );
 };

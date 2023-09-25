@@ -35,10 +35,10 @@ function App(props) {
                         </Typography>
                     </Box>
                 </Card>
+                <Start style={currentPage === "Start" ? 'display:none' : 'display:block'} />
 
                 <Home style={currentPage === "Home" ? 'display:none' : 'display:block'} />
                 <About style={currentPage === "About" ? 'display:none' : 'display:block'} />
-                <Start style={currentPage === "Start" ? 'display:none' : 'display:block'} />
             </Container>
         </ThemeProvider>
     );

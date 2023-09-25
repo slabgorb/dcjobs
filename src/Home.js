@@ -13,7 +13,7 @@ function Home() {
         <Section title={t("home_title1")} body={t("home_body1")} />
         <Section title={t("home_title2")} body={t("home_body2")} />
         <Section title={t("home_title3")} body={t("home_body3")} />
-        <Section title="Unearthing Unique Career Avenues" body="">
+        <Container>
             <ul>
                 <li>{t("career_1")}</li>
                 <li>{t("career_2")}</li>
@@ -28,23 +28,11 @@ function Home() {
                 <li>{t("career_11")}</li>
                 <li>{t("career_12")}</li>
             </ul>
-        </Section>
+        </Container>
 
 
         <div>{t("home_body4")}</div>
-
-
-        <div>
-
-                    </div>
-
-
-
-        <div>
-            ;
-        </div>
-
-    </Container>);
+    </Container >);
 
 }
 export default Home;
